@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +19,15 @@
                 Encriptar
             </button>
             <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()"/>
+            <button class="btn-copiar" type="button" onclick="copiar()" id="copy">Copiar</button>
         </div>
     </div>
     <div class="encriptado">
-            <img src="" alt="" id="dibujo">
+            <img src="./assets/muñeco.jpg" alt="encriptado" id="dibujo">
             <div class="mensaje-encriptado" id="mensaje-encriptado">
                 <h2 id="titulo-mensaje">Ningún mensaje encontrado</h2>
                 <p id="parrafo">Ingresar el texto para encriptar o desencriptar</p>
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
+                <!-- <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea> -->
             </div>
         </div>
     </div>
