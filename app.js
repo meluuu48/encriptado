@@ -50,12 +50,19 @@ function encriptar() {
       }
   }
 
-     function copy() {
-        let copyText = document.querySelector("#input");
-        copyText.select();
-        document.execCommand("copy");
-      }
-      
-      document.querySelector("#copy").addEventListener("click", copy);
-      
-  
+  function copy() {
+    let texto = document.getElementById("texto");
+    if (texto.value.length > 0) {
+        navigator.clipboard.writeText(texto.value)
+            .then(() => {
+                swal("¡Copiado!", "El texto ha sido copiado al portapapeles.", "success");
+            })
+            .catch(err => {
+                console.error("Error al copiar: ", err);
+            });
+    } else {
+        swal("Ooops!", "No hay texto para copiar", "warning");
+    }
+}
+
+document.querySelector("#copy").addEventListener("click", copy);
